@@ -140,8 +140,8 @@ ul{margin:0;padding:0;list-style:none}
 .brand__mark svg{position:absolute;inset:0;width:100%;height:100%}
 .brand__mark b{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--gold);line-height:1}
 .brand__text{display:flex;flex-direction:column;line-height:1.05}
-.brand__text strong{font-family:var(--serif);font-size:1.28rem;font-weight:500}
-.brand__text small{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;opacity:.62;margin-top:3px}
+.brand__text strong{font-family:var(--serif);font-size:1.28rem;font-weight:500;white-space:nowrap}
+.brand__text small{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;opacity:.62;margin-top:3px;white-space:nowrap}
 
 .nav__links{display:flex;align-items:center;gap:clamp(12px,1.8vw,26px)}
 .nav__links a{position:relative;white-space:nowrap;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,248,244,.86);padding:6px 0;transition:color .3s}
@@ -165,8 +165,8 @@ ul{margin:0;padding:0;list-style:none}
 .burger.is-open span:nth-child(2){opacity:0}
 .burger.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
-@media (max-width:1300px){.nav__phone span{display:none}}
-@media (max-width:1120px){
+@media (max-width:1440px){.nav__phone span{display:none}}
+@media (max-width:1180px){
   .burger{display:flex}
   .nav__cta{display:none}
   .nav__cta--mobile{display:inline-flex;margin-top:18px}
