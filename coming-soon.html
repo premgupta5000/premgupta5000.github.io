@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hotel Shera and Restaurant, Raipur — Launching Soon</title>
+<meta name="description" content="Hotel Shera and Restaurant, Rawabhata, Bilaspur Road, Raipur — air-conditioned rooms, a family multi-cuisine restaurant and an open-air rooftop garden. Our new website is on the way; the hotel is open as usual. Call +91 8959999936.">
+<meta name="theme-color" content="#0B0E11">
+<meta name="robots" content="index,follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Hotel Shera and Restaurant — Launching Soon">
+<meta property="og:description" content="Rooms, a family restaurant and a rooftop garden. Our new website is on the way.">
+<meta property="og:image" content="assets/img/exterior.jpg">
+
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2312171B'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-size='34' fill='%23E0A730' text-anchor='middle'%3ES%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="image" href="assets/img/exterior.jpg">
+
+<style>
+:root{
+  --ink:#0B0E11; --graphite:#12171B; --graphite-2:#171D22;
+  --gold:#E0A730; --gold-l:#F0C868; --gold-d:#B7821A;
+  --cream:#FAF8F4;
+  --line:rgba(250,248,244,.14);
+  --line-2:rgba(250,248,244,.26);
+  --dim:rgba(250,248,244,.62);
+  --serif:"Cormorant Garamond",Georgia,serif;
+  --sans:"Jost",ui-sans-serif,system-ui,-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
+  --ease:cubic-bezier(.22,.61,.36,1);
+  --pad:clamp(26px,4.2vw,72px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--ink);color:var(--cream);
+  font:400 17px/1.68 var(--sans);-webkit-font-smoothing:antialiased;
+  min-height:100dvh;overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+ul{margin:0;padding:0;list-style:none}
+img{max-width:100%;display:block}
+::selection{background:var(--gold);color:var(--ink)}
+:focus-visible{outline:2px solid var(--gold);outline-offset:3px;border-radius:2px}
+.sr{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+
+/* ============ shell ============ */
+.shell{display:grid;grid-template-columns:1.04fr .96fr;min-height:100dvh}
+
+/* ---- left: content ---- */
+.pane{position:relative;isolation:isolate}
+.pane--media{overflow:hidden}
+.fx{position:absolute;inset:0;z-index:-1;overflow:hidden;pointer-events:none}
+.pane--copy{
+  display:flex;flex-direction:column;justify-content:space-between;gap:clamp(22px,3vw,42px);
+  padding:clamp(24px,3vw,44px) var(--pad);
+  background:linear-gradient(155deg,var(--graphite-2),var(--ink) 62%);
+}
+.aurora{position:absolute;inset:-25%;opacity:.55}
+.aurora i{position:absolute;display:block;border-radius:50%;filter:blur(90px)}
+.aurora i:nth-child(1){width:46%;padding-bottom:46%;left:-8%;top:2%;background:rgba(224,167,48,.36);animation:float1 18s var(--ease) infinite alternate}
+.aurora i:nth-child(2){width:40%;padding-bottom:40%;right:-6%;bottom:4%;background:rgba(64,120,110,.34);animation:float2 22s var(--ease) infinite alternate}
+@keyframes float1{to{transform:translate3d(14%,10%,0) scale(1.18)}}
+@keyframes float2{to{transform:translate3d(-12%,-12%,0) scale(1.14)}}
+.grain{
+  position:absolute;inset:0;opacity:.6;
+  background-image:radial-gradient(rgba(250,248,244,.05) 1px,transparent 1px);background-size:24px 24px;
+}
+
+/* ---- brand ---- */
+.brand{display:inline-flex;align-items:center;gap:13px}
+.brand__mark{position:relative;width:46px;height:46px;flex:none;display:grid;place-items:center;color:var(--cream)}
+.brand__mark svg{position:absolute;inset:0;width:100%;height:100%}
+.brand__mark b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--gold);line-height:1}
+.brand__text{display:flex;flex-direction:column;line-height:1.05}
+.brand__text strong{font-family:var(--serif);font-size:1.42rem;font-weight:500;letter-spacing:.01em}
+.brand__text small{font-size:.59rem;letter-spacing:.3em;text-transform:uppercase;opacity:.6;margin-top:4px}
+
+/* ---- status pill ---- */
+.status{
+  display:inline-flex;align-items:center;gap:10px;align-self:flex-start;
+  border:1px solid var(--line);border-radius:100px;padding:8px 16px 8px 12px;
+  font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(250,248,244,.8);
+  background:rgba(250,248,244,.04);backdrop-filter:blur(6px);
+}
+.dot{position:relative;width:7px;height:7px;border-radius:50%;background:var(--gold);flex:none}
+.dot::after{content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--gold);opacity:0;animation:ping 2.4s var(--ease) infinite}
+@keyframes ping{0%{transform:scale(.6);opacity:.9}70%,100%{transform:scale(1.5);opacity:0}}
+
+/* ---- headline ---- */
+h1{
+  font-family:var(--serif);font-weight:300;letter-spacing:-.018em;
+  font-size:clamp(2.5rem,5vw,4.2rem);line-height:1.03;margin:.32em 0 .24em;max-width:13ch;
+}
+h1 em{font-style:italic;color:var(--gold-l)}
+h1 .ln{display:block;overflow:hidden}
+h1 .ln>span{display:block;transform:translateY(108%);animation:rise 1s var(--ease) forwards}
+h1 .ln:nth-child(2)>span{animation-delay:.1s}
+@keyframes rise{to{transform:none}}
+
+.lede{font-size:clamp(.98rem,1.1vw,1.08rem);color:var(--dim);max-width:46ch;margin:0 0 clamp(20px,2.4vw,28px)}
+
+/* ---- countdown ---- */
+.count{display:flex;gap:clamp(10px,1.4vw,18px);margin:0 0 clamp(26px,3.2vw,36px)}
+.count[hidden]{display:none}
+.count li{
+  flex:0 1 96px;border:1px solid var(--line);border-radius:3px;padding:14px 6px 11px;text-align:center;
+  background:linear-gradient(180deg,rgba(250,248,244,.055),rgba(250,248,244,.015));
+  backdrop-filter:blur(6px);
+}
+.count b{
+  display:block;font-family:var(--serif);font-weight:400;font-size:clamp(1.7rem,2.6vw,2.3rem);
+  line-height:1;color:var(--cream);font-variant-numeric:tabular-nums;
+}
+.count span{display:block;margin-top:7px;font-size:.56rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(250,248,244,.5)}
+
+/* ---- notify ---- */
+.notify{max-width:480px}
+.notify__label{display:block;font-size:.63rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(250,248,244,.55);margin-bottom:9px}
+.notify__row{position:relative;display:flex;align-items:center;gap:8px;border:1px solid var(--line);border-radius:3px;background:rgba(250,248,244,.05);padding:6px 6px 6px 0;transition:border-color .3s,background .3s}
+.notify__row:focus-within{border-color:var(--gold);background:rgba(250,248,244,.08)}
+.notify input{
+  flex:1;min-width:0;background:transparent;border:0;color:var(--cream);
+  padding:13px 16px;font:400 .96rem var(--sans);
+}
+.notify input:focus{outline:none}
+.notify input::placeholder{color:rgba(250,248,244,.36)}
+.btn{
+  position:relative;display:inline-flex;align-items:center;justify-content:center;gap:.55em;
+  padding:13px 26px;border:0;border-radius:2px;cursor:pointer;overflow:hidden;
+  font:500 .74rem/1 var(--sans);letter-spacing:.16em;text-transform:uppercase;white-space:nowrap;
+  background:var(--gold);color:#1C1503;
+  transition:background .3s,transform .3s var(--ease);
+}
+.btn::after{
+  content:"";position:absolute;top:0;left:-120%;width:55%;height:100%;
+  background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-18deg);transition:left .7s var(--ease);
+}
+.btn:hover{background:var(--gold-l);transform:translateY(-1px)}
+.btn:hover::after{left:130%}
+.notify__status{margin:9px 0 0;font-size:.85rem;color:var(--gold-l);min-height:1.2em}
+.notify__status.is-err{color:#EC9683}
+
+/* ---- offering tags ---- */
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin:clamp(18px,2.2vw,26px) 0 0}
+.tags li{
+  font-size:.64rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(250,248,244,.72);
+  border:1px solid var(--line);border-radius:100px;padding:8px 14px;
+  transition:border-color .3s,color .3s;
+}
+.tags li:hover{border-color:var(--line-2);color:var(--cream)}
+
+/* ---- foot ---- */
+.foot{display:flex;flex-direction:column;gap:16px;padding-top:clamp(18px,2.4vw,26px);border-top:1px solid var(--line)}
+.foot__row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px 30px}
+.contacts{display:flex;flex-wrap:wrap;gap:10px 26px}
+.contacts li{display:flex;align-items:center;gap:9px;font-size:.9rem;color:var(--dim)}
+.contacts svg{width:16px;height:16px;flex:none;fill:none;stroke:var(--gold);stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.contacts a:hover{color:var(--gold-l)}
+.social{display:flex;gap:10px}
+.social a{width:36px;height:36px;border:1px solid var(--line);border-radius:2px;display:grid;place-items:center;transition:background .3s,border-color .3s,color .3s,transform .3s var(--ease)}
+.social a svg{width:16px;height:16px;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linejoin:round}
+.social a:hover{background:var(--gold);color:#1C1503;border-color:var(--gold);transform:translateY(-2px)}
+.copy{margin:0;font-size:.76rem;color:rgba(250,248,244,.36);letter-spacing:.04em}
+
+/* ============ right: media ============ */
+.pane--media{background:linear-gradient(150deg,#243244,#0E1216)}
+.slide{
+  position:absolute;inset:0;background-size:cover;background-position:center;
+  opacity:0;transition:opacity 1.5s var(--ease);
+}
+.slide.on{opacity:1;animation:kb 11s linear forwards}
+@keyframes kb{from{transform:scale(1.03)}to{transform:scale(1.13)}}
+.pane--media::after{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(11,14,17,.85),rgba(11,14,17,.12) 34%,transparent 62%),
+    linear-gradient(to top,rgba(11,14,17,.72),transparent 46%);
+}
+.cap{
+  position:absolute;left:clamp(22px,2.6vw,38px);bottom:clamp(22px,2.6vw,38px);z-index:2;
+  display:flex;flex-direction:column;gap:5px;
+}
+.cap b{font-family:var(--serif);font-weight:400;font-size:1.35rem}
+.cap span{font-size:.62rem;letter-spacing:.24em;text-transform:uppercase;color:rgba(250,248,244,.6)}
+.bars{position:absolute;right:clamp(22px,2.6vw,38px);bottom:clamp(26px,2.8vw,42px);z-index:2;display:flex;gap:7px}
+.bars i{display:block;width:26px;height:2px;background:rgba(250,248,244,.28);transition:background .4s}
+.bars i.on{background:var(--gold)}
+
+/* thin loading line across the top of the media pane */
+.tick{position:absolute;top:0;left:0;right:0;height:2px;z-index:3;background:rgba(250,248,244,.12)}
+.tick i{display:block;height:100%;width:0;background:var(--gold);transition:width .25s linear}
+
+/* ============ responsive ============ */
+@media (max-width:960px){
+  .shell{grid-template-columns:1fr}
+  .pane--media{position:fixed;inset:0;z-index:0;min-height:100dvh}
+  .pane--media::after{background:linear-gradient(to top,rgba(11,14,17,.97),rgba(11,14,17,.83) 42%,rgba(11,14,17,.92))}
+  .cap,.bars,.tick{display:none}
+  .pane--copy{position:relative;z-index:1;background:transparent;min-height:100dvh}
+  .aurora{opacity:.4}
+}
+/* short laptop screens: keep the whole panel on one view */
+@media (min-width:961px) and (max-height:830px){
+  .pane--copy{gap:18px;padding-block:22px}
+  h1{font-size:clamp(2.2rem,3.9vw,3.1rem);margin:.26em 0 .2em}
+  .lede{margin-bottom:18px;font-size:1rem}
+  .tags{margin-top:16px}
+  .tags li{padding:7px 12px}
+  .brand__mark{width:40px;height:40px}
+  .brand__text strong{font-size:1.28rem}
+}
+@media (max-width:560px){
+  .count li{flex:1 1 0;padding:12px 4px 9px}
+  .notify__row{flex-direction:column;align-items:stretch;padding:6px}
+  .notify input{padding:12px 10px}
+  .btn{width:100%;padding:14px 20px}
+  .foot{flex-direction:column;align-items:flex-start}
+}
+@media (prefers-reduced-motion:reduce){
+  h1 .ln>span{transform:none;animation:none}
+  .aurora i,.slide.on,.dot::after{animation:none}
+  .btn::after{display:none}
+}
+</style>
+</head>
+<body>
+
+<div class="shell">
+
+  <!-- ============ CONTENT ============ -->
+  <section class="pane pane--copy">
+    <div class="fx" aria-hidden="true">
+      <div class="aurora"><i></i><i></i></div>
+      <div class="grain"></div>
+    </div>
+
+    <header>
+      <a class="brand" href="/" aria-label="Hotel Shera and Restaurant">
+        <span class="brand__mark" aria-hidden="true">
+          <svg viewBox="0 0 40 40" fill="none"><path d="M20 2 L36 20 L20 38 L4 20 Z" stroke="currentColor" stroke-width="1.1" opacity=".55"/><path d="M20 8.5 L31 20 L20 31.5 L9 20 Z" stroke="currentColor" stroke-width=".8" opacity=".3"/></svg>
+          <b>S</b>
+        </span>
+        <span class="brand__text"><strong>Hotel Shera</strong><small>and Restaurant</small></span>
+      </a>
+    </header>
+
+    <main>
+      <p class="status"><span class="dot" aria-hidden="true"></span>New website in progress</p>
+
+      <h1>
+        <span class="ln"><span>We're setting</span></span>
+        <span class="ln"><span><em>the table.</em></span></span>
+      </h1>
+
+      <p class="lede">The site is being built. The hotel is not waiting for it — rooms, the restaurant and the
+        rooftop garden on Bilaspur Road are open as usual. Call the desk and we'll take your booking today.</p>
+
+      <ul class="count" id="count" hidden aria-label="Time until launch">
+        <li><b id="cd-d">00</b><span>Days</span></li>
+        <li><b id="cd-h">00</b><span>Hours</span></li>
+        <li><b id="cd-m">00</b><span>Minutes</span></li>
+        <li><b id="cd-s">00</b><span>Seconds</span></li>
+      </ul>
+
+      <form class="notify" id="notifyForm" novalidate>
+        <label class="notify__label" for="email">Tell me when it goes live</label>
+        <div class="notify__row">
+          <input id="email" type="email" placeholder="your@email.com" autocomplete="email" required>
+          <button class="btn" type="submit">Notify Me</button>
+        </div>
+        <p class="notify__status" id="notifyStatus" role="status"></p>
+      </form>
+
+      <ul class="tags">
+        <li>Air-conditioned rooms</li>
+        <li>Multi-cuisine restaurant</li>
+        <li>Rooftop garden dining</li>
+        <li>Events &amp; banquets</li>
+        <li>Ample parking</li>
+      </ul>
+    </main>
+
+    <footer class="foot">
+      <div class="foot__row">
+      <ul class="contacts">
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.5.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.57 3.5a1 1 0 0 1-.25 1z"/></svg>
+          <a href="tel:+918959999936">+91 8959999936</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3.5 7 8.5 6 8.5-6"/></svg>
+          <a href="mailto:bookings@hotelshera.com">bookings@hotelshera.com</a>
+        </li>
+        <li>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-11a7 7 0 1 0-14 0c0 4.8 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg>
+          <a href="https://www.google.com/maps/search/?api=1&amp;query=Hotel+Shera+and+Restaurant+Metal+Park+Rawabhata+Bilaspur+Road+Birgaon+Raipur+493221" target="_blank" rel="noopener">Metal Park, Rawabhata, Bilaspur Road, Near Birgaon, Bhanpuri, Raipur, Chhattisgarh 493221</a>
+        </li>
+      </ul>
+
+      <div class="social">
+        <a href="https://www.instagram.com/hotel_shera_and_restaurant_/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h2.5V4.6H14c-2.2 0-3.6 1.5-3.6 3.8V10H8v3.4h2.4V21H14v-7.6h2.6l.4-3.4H14V8.7c0-.5.3-.7 1-.7Z"/></svg></a>
+        <a href="https://wa.me/918959999936" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20.5 11.6A8.4 8.4 0 0 1 7.8 19L3.5 20.5l1.6-4.2a8.4 8.4 0 1 1 15.4-4.7Z"/><path d="M8.8 9.2c.3 2.4 3.6 5.7 6 6l1.1-1.6-2-1-.9.9c-1-.4-2.1-1.5-2.5-2.5l.9-.9-1-2z" fill="currentColor" stroke="none"/></svg></a>
+      </div>
+      </div>
+
+      <p class="copy">&copy; <span id="year">2026</span> Hotel Shera and Restaurant</p>
+    </footer>
+  </section>
+
+  <!-- ============ MEDIA ============ -->
+  <section class="pane pane--media" id="media" aria-hidden="true">
+    <div class="tick"><i id="tickBar"></i></div>
+    <div class="cap"><b id="capTitle">Hotel Shera</b><span id="capSub">Parking at the door</span></div>
+    <div class="bars" id="bars"></div>
+  </section>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+  var reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var $ = function (id) { return document.getElementById(id); };
+
+  $('year').textContent = new Date().getFullYear();
+
+  /* ------------------------------------------------------------------
+     TODO(owner): set your launch date below and the countdown appears.
+     Leave it as null (or set a date in the past) and it stays hidden.
+     Format: 'YYYY-MM-DDTHH:MM:SS' in the visitor's local time.
+     ------------------------------------------------------------------ */
+  var LAUNCH_DATE = null;   // e.g. '2026-10-01T10:00:00'
+
+  if (LAUNCH_DATE) {
+    var target = new Date(LAUNCH_DATE).getTime();
+    var box = $('count');
+    var pad = function (n) { return String(n).padStart(2, '0'); };
+    var tickDown = function () {
+      var left = target - Date.now();
+      if (isNaN(target) || left <= 0) { box.hidden = true; return false; }
+      box.hidden = false;
+      var s = Math.floor(left / 1000);
+      $('cd-d').textContent = pad(Math.floor(s / 86400));
+      $('cd-h').textContent = pad(Math.floor(s / 3600) % 24);
+      $('cd-m').textContent = pad(Math.floor(s / 60) % 60);
+      $('cd-s').textContent = pad(s % 60);
+      return true;
+    };
+    if (tickDown()) setInterval(tickDown, 1000);
+  }
+
+  /* ---------- media pane: cross-fading property photographs ---------- */
+  var SLIDES = [
+    { img: 'assets/img/exterior.jpg',          title: 'Hotel Shera',        sub: 'Parking at the door',    grad: 'linear-gradient(150deg,#243244,#0f1520)', pos: '92% 60%' },
+    { img: 'assets/img/rooftop-garden.jpg',    title: 'The rooftop garden', sub: 'Open-air dining',        grad: 'linear-gradient(150deg,#2a2b26,#131412)' },
+    { img: 'assets/img/restaurant-indoor.jpg', title: 'The restaurant',     sub: 'Multi-cuisine, all day', grad: 'linear-gradient(150deg,#232a33,#101317)' },
+    { img: 'assets/img/room-executive.jpg',    title: 'Deluxe rooms',       sub: 'Air-conditioned',        grad: 'linear-gradient(150deg,#3d372e,#181511)' }
+  ];
+  var HOLD = 5200;
+
+  var media = $('media'), bars = $('bars'), tickBar = $('tickBar');
+  var capTitle = $('capTitle'), capSub = $('capSub');
+  var nodes = [];
+
+  SLIDES.forEach(function (s, i) {
+    var el = document.createElement('div');
+    el.className = 'slide' + (i === 0 ? ' on' : '');
+    el.style.background = s.grad;
+    el.style.backgroundSize = 'cover';
+    el.style.backgroundPosition = s.pos || 'center';
+    media.insertBefore(el, media.firstChild);
+    nodes.push(el);
+
+    var probe = new Image();
+    probe.onload = function () { el.style.backgroundImage = 'url("' + s.img + '"), ' + s.grad; };
+    probe.src = s.img;
+
+    var bar = document.createElement('i');
+    if (i === 0) bar.className = 'on';
+    bars.appendChild(bar);
+  });
+
+  capTitle.textContent = SLIDES[0].title;
+  capSub.textContent = SLIDES[0].sub;
+
+  var idx = 0, start = null, raf;
+
+  function show(n) {
+    idx = (n + SLIDES.length) % SLIDES.length;
+    nodes.forEach(function (el, i) {
+      el.classList.toggle('on', i === idx);
+      if (i === idx && !reduce) { el.style.animation = 'none'; void el.offsetWidth; el.style.animation = ''; }
+    });
+    Array.prototype.forEach.call(bars.children, function (b, i) { b.classList.toggle('on', i === idx); });
+    capTitle.textContent = SLIDES[idx].title;
+    capSub.textContent = SLIDES[idx].sub;
+  }
+
+  function frame(ts) {
+    if (start === null) start = ts;
+    var p = Math.min((ts - start) / HOLD, 1);
+    tickBar.style.width = (p * 100) + '%';
+    if (p >= 1) { start = ts; show(idx + 1); }
+    raf = requestAnimationFrame(frame);
+  }
+
+  if (SLIDES.length > 1) {
+    if (reduce) {
+      setInterval(function () { show(idx + 1); }, HOLD * 2);
+    } else {
+      raf = requestAnimationFrame(frame);
+      document.addEventListener('visibilitychange', function () {
+        if (document.hidden) { cancelAnimationFrame(raf); }
+        else { start = null; raf = requestAnimationFrame(frame); }
+      });
+    }
+  }
+
+  /* ---------- notify form ---------- */
+  var form = $('notifyForm'), input = $('email'), status = $('notifyStatus');
+  var re = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    status.classList.remove('is-err');
+    if (!re.test(input.value.trim())) {
+      status.textContent = 'Please enter a valid email address.';
+      status.classList.add('is-err');
+      input.focus();
+      return;
+    }
+    // TODO(owner): POST this to your mailing list or form endpoint.
+    status.textContent = 'Thank you — we will email you the moment we go live.';
+    form.reset();
+  });
+})();
+</script>
+</body>
+</html>
