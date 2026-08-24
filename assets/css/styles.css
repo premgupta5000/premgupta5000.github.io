@@ -136,12 +136,12 @@ ul{margin:0;padding:0;list-style:none}
 
 .brand{display:flex;align-items:center;gap:12px;color:var(--cream);transition:color .4s}
 .nav.is-solid .brand{color:var(--graphite)}
-.brand__mark{position:relative;width:40px;height:40px;flex:none;display:grid;place-items:center}
+.brand__mark{position:relative;width:46px;height:46px;flex:none;display:grid;place-items:center}
 .brand__mark svg{position:absolute;inset:0;width:100%;height:100%}
-.brand__mark b{font-family:var(--serif);font-size:1.15rem;font-weight:500;color:var(--gold);line-height:1}
+.brand__mark b{font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--gold);line-height:1}
 .brand__text{display:flex;flex-direction:column;line-height:1.05}
-.brand__text strong{font-family:var(--serif);font-size:1.28rem;font-weight:500;white-space:nowrap}
-.brand__text small{font-size:.58rem;letter-spacing:.28em;text-transform:uppercase;opacity:.62;margin-top:3px;white-space:nowrap}
+.brand__text strong{font-family:var(--serif);font-size:1.5rem;font-weight:500;white-space:nowrap}
+.brand__text small{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;opacity:.85;margin-top:4px;white-space:nowrap}
 
 .nav__links{display:flex;align-items:center;gap:clamp(12px,1.8vw,26px)}
 .nav__links a{position:relative;white-space:nowrap;font-size:.76rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,248,244,.86);padding:6px 0;transition:color .3s}
@@ -166,7 +166,7 @@ ul{margin:0;padding:0;list-style:none}
 .burger.is-open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
 
 @media (max-width:1440px){.nav__phone span{display:none}}
-@media (max-width:1180px){
+@media (max-width:1260px){
   .burger{display:flex}
   .nav__cta{display:none}
   .nav__cta--mobile{display:inline-flex;margin-top:18px}
@@ -488,6 +488,8 @@ a.map__note:hover{background:var(--graphite);color:var(--cream)}
    ============================================================= */
 .footer{background:var(--ink);color:rgba(250,248,244,.66);padding-top:clamp(60px,7vw,92px)}
 .brand--foot{color:var(--cream);margin-bottom:18px}
+.brand--foot .brand__text strong{font-size:1.62rem}
+.brand--foot .brand__text small{font-size:.74rem;opacity:.9}
 .footer__grid{display:grid;grid-template-columns:1.5fr .8fr .8fr 1.3fr;gap:clamp(28px,4vw,58px)}
 .footer__brand p{margin:0 0 22px;font-size:.94rem;max-width:36ch}
 .social{display:flex;gap:12px}
