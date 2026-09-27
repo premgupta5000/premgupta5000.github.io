@@ -487,7 +487,9 @@ a.map__note:hover{background:var(--graphite);color:var(--cream)}
 .field--line input,.field--line select,.field--line textarea{border-bottom-color:rgba(18,23,27,.2)}
 .field.is-invalid input,.field.is-invalid textarea{border-color:#A6412F}
 .opt{text-transform:none;letter-spacing:0;color:#B2B7BB}
-.cform__status{margin:14px 0 0;font-size:.88rem;color:var(--gold-d);min-height:1.2em}
+.cform .btn svg{width:17px;height:17px;flex:none;fill:currentColor}
+.cform__hint{margin:12px 0 0;font-size:.78rem;color:var(--muted)}
+.cform__status{margin:4px 0 0;font-size:.88rem;color:var(--gold-d);min-height:1.2em}
 .cform__status.is-err{color:#A6412F}
 @media (max-width:900px){.contact__grid{grid-template-columns:1fr}}
 @media (max-width:520px){.cform__row{grid-template-columns:1fr}}

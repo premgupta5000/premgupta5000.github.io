@@ -187,6 +187,21 @@
     if (e.key === 'ArrowRight') openLb(lbIdx + 1);
   });
 
+  /* ---------- WhatsApp handoff ---------- */
+  var WA_NUMBER = '918959999936';
+
+  /* Opens a chat with the message written out. Returns false only when the popup
+     was blocked and we had to send this tab there instead. */
+  var openWhatsApp = function (lines) {
+    var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+    /* Passing 'noopener' in the features string makes window.open return null even
+       when the tab did open, so sever the opener on the handle instead. */
+    var win = window.open(url, '_blank');
+    if (win) { try { win.opener = null; } catch (err) {} return true; }
+    window.location.href = url;
+    return false;
+  };
+
   /* ---------- booking form ---------- */
   var pad = function (n) { return String(n).padStart(2, '0'); };
   var iso = function (d) { return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()); };
@@ -210,7 +225,6 @@
   });
 
   var bookNote = $('#bookNote');
-  var WA_NUMBER = '918959999936';
 
   /* "Sat, 4 Oct 2026" — spelled out by hand so the message reads the same everywhere */
   var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
@@ -241,13 +255,7 @@
       '',
       'Please let me know the availability and tariff. Thank you.'
     ];
-    var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
-
-    /* Passing 'noopener' in the features string makes window.open return null even
-       when the tab did open, so sever the opener on the handle instead. */
-    var win = window.open(url, '_blank');
-    if (win) { try { win.opener = null; } catch (err) {} }
-    else { window.location.href = url; return; }
+    if (!openWhatsApp(lines)) return;
 
     bookNote.textContent = 'Opening WhatsApp with your ' + nights + '-night request for ' +
       $('#guests').value.toLowerCase() + ' — send the message and we will confirm availability.';
@@ -277,8 +285,17 @@
       bad[0].focus();
       return;
     }
-    status.textContent = 'Thank you — your note is on its way. We reply within a few hours.';
-    cForm.reset();
+    var phone = $('#cphone').value.trim();
+    var lines = ['Hi Hotel Shera, I have a message from your website.', ''];
+    lines.push('Name: ' + $('#cname').value.trim());
+    lines.push('Email: ' + $('#cemail').value.trim());
+    if (phone) lines.push('Phone: ' + phone);
+    lines.push('About: ' + $('#csubject').value, '', $('#cmsg').value.trim());
+
+    /* Deliberately no reset(): nothing has been sent until the guest presses send
+       in WhatsApp, so their words stay on the page in case the handoff fails. */
+    if (!openWhatsApp(lines)) return;
+    status.textContent = 'Opening WhatsApp with your message — press send there and we will reply.';
   });
 
   /* ---------- newsletter ---------- */
