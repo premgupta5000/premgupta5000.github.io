@@ -119,36 +119,6 @@
     if (document.hidden) clearInterval(heroTimer); else restartHero();
   });
 
-  /* ---------- animated counters ---------- */
-  var counters = $$('.count');
-  function runCount(el) {
-    var to = parseFloat(el.getAttribute('data-to')) || 0;
-    var dec = el.getAttribute('data-decimal');
-    var suffix = el.getAttribute('data-suffix') || '';
-    var target = dec ? parseFloat(to + '.' + dec) : to;
-    if (reduce) { el.textContent = (dec ? target.toFixed(1) : target) + suffix; return; }
-    var start = null, dur = 1500;
-    function step(ts) {
-      if (start === null) start = ts;
-      var p = Math.min((ts - start) / dur, 1);
-      var eased = 1 - Math.pow(1 - p, 3);
-      var val = target * eased;
-      el.textContent = (dec ? val.toFixed(1) : Math.round(val)) + suffix;
-      if (p < 1) requestAnimationFrame(step);
-    }
-    requestAnimationFrame(step);
-  }
-  if ('IntersectionObserver' in window) {
-    var cio = new IntersectionObserver(function (entries) {
-      entries.forEach(function (en) {
-        if (en.isIntersecting) { runCount(en.target); cio.unobserve(en.target); }
-      });
-    }, { threshold: 0.6 });
-    counters.forEach(function (c) { cio.observe(c); });
-  } else {
-    counters.forEach(runCount);
-  }
-
   /* ---------- gallery lightbox ---------- */
   var gals = $$('.gal');
   var lb = $('#lightbox'), lbImg = $('#lbImg'), lbCap = $('#lbCap');
