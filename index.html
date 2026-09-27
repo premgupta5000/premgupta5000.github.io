@@ -25,7 +25,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/exterior.jpg">
-<link rel="stylesheet" href="assets/css/styles.css?v=7">
+<link rel="stylesheet" href="assets/css/styles.css?v=8">
 
 <script type="application/ld+json">
 {
@@ -449,13 +449,97 @@
     <header class="sec-head">
       <div>
         <p class="eyebrow reveal">From the kitchen</p>
-        <h2 class="h2 reveal" data-delay="1">The whole card, <em>page by page.</em></h2>
+        <h2 class="h2 reveal" data-delay="1">A taste of <em>the menu.</em></h2>
       </div>
-      <p class="sec-head__aside reveal" data-delay="2">More than two hundred dishes — breakfast, tandoor, curries,
-        biryani, Chinese and dessert. Tap a page to read it, or take the PDF with you.</p>
+      <p class="sec-head__aside reveal" data-delay="2">Eight of the dishes people order most. The full card runs to
+        more than two hundred, across breakfast, tandoor, curries, biryani, Chinese and dessert.</p>
     </header>
 
+    <div class="taste__grid">
+      <article class="dish reveal">
+        <figure class="ph dish__media" style="--g:linear-gradient(160deg,#3d372e,#181511)">
+          <img src="assets/img/menu/tandoori-chicken.jpg" alt="Tandoori Chicken / Roast" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="dish__body">
+          <span class="dish__cat">Non-veg tandoor</span>
+          <h3>Tandoori Chicken / Roast</h3>
+          <p class="dish__price">₹250–500</p>
+        </div>
+      </article>
+      <article class="dish reveal" data-delay="1">
+        <figure class="ph dish__media" style="--g:linear-gradient(160deg,#3d372e,#181511)">
+          <img src="assets/img/menu/paneer-tikka.jpg" alt="Paneer Tikka" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="dish__body">
+          <span class="dish__cat">Veg tandoor · 8 pcs</span>
+          <h3>Paneer Tikka</h3>
+          <p class="dish__price">₹400</p>
+        </div>
+      </article>
+      <article class="dish reveal" data-delay="2">
+        <figure class="ph dish__media" style="--g:linear-gradient(160deg,#3d372e,#181511)">
+          <img src="assets/img/menu/biryani.jpg" alt="Biryani" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="dish__body">
+          <span class="dish__cat">Veg, chicken or mutton</span>
+          <h3>Biryani</h3>
+          <p class="dish__price">₹140–400</p>
+        </div>
+      </article>
+      <article class="dish reveal" data-delay="3">
+        <figure class="ph dish__media" style="--g:linear-gradient(160deg,#3d372e,#181511)">
+          <img src="assets/img/menu/paneer-butter-masala.jpg" alt="Paneer Butter Masala" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="dish__body">
+          <span class="dish__cat">Vegetarian</span>
+          <h3>Paneer Butter Masala</h3>
+          <p class="dish__price">₹180–340</p>
+        </div>
+      </article>
+      <article class="dish reveal" data-delay="4">
+        <figure class="ph dish__media" style="--g:linear-gradient(160deg,#3d372e,#181511)">
+          <img src="assets/img/menu/palak-paneer.jpg" alt="Palak Paneer" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="dish__body">
+          <span class="dish__cat">Vegetarian</span>
+          <h3>Palak Paneer</h3>
+          <p class="dish__price">₹170–340</p>
+        </div>
+      </article>
+      <article class="dish reveal" data-delay="5">
+        <figure class="ph dish__media" style="--g:linear-gradient(160deg,#3d372e,#181511)">
+          <img src="assets/img/menu/dal-fry.jpg" alt="Dal Fry / Dal Tadka" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="dish__body">
+          <span class="dish__cat">Dal</span>
+          <h3>Dal Fry / Dal Tadka</h3>
+          <p class="dish__price">₹90–180</p>
+        </div>
+      </article>
+      <article class="dish reveal">
+        <figure class="ph dish__media" style="--g:linear-gradient(160deg,#3d372e,#181511)">
+          <img src="assets/img/menu/chowmein.jpg" alt="Veg Chowmein" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="dish__body">
+          <span class="dish__cat">Chinese</span>
+          <h3>Veg Chowmein</h3>
+          <p class="dish__price">₹190</p>
+        </div>
+      </article>
+      <article class="dish reveal" data-delay="1">
+        <figure class="ph dish__media" style="--g:linear-gradient(160deg,#3d372e,#181511)">
+          <img src="assets/img/menu/gulab-jamun.jpg" alt="Gulab Jamun" loading="lazy" onerror="this.remove()">
+        </figure>
+        <div class="dish__body">
+          <span class="dish__cat">Dessert · 2 pcs</span>
+          <h3>Gulab Jamun</h3>
+          <p class="dish__price">₹50</p>
+        </div>
+      </article>
+    </div>
+
     <div class="menucard">
+      <h3 class="menucard__head reveal">The whole card, page by page</h3>
       <div class="menucard__grid">
         <button class="gal reveal" data-full="assets/img/menu-card/page-01.webp" aria-label="Open menu page: the menu card cover">
           <img src="assets/img/menu-card/page-01-thumb.webp" alt="Menu page — the menu card cover" loading="lazy" onerror="this.remove()"><span class="gal__cap">Cover</span>
@@ -778,6 +862,6 @@
 </div>
 
 <!-- bump ?v= when css/js change: GitHub Pages serves these with max-age=600 -->
-<script src="assets/js/main.js?v=7"></script>
+<script src="assets/js/main.js?v=8"></script>
 </body>
 </html>

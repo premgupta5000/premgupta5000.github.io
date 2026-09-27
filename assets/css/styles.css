@@ -105,7 +105,6 @@ ul{margin:0;padding:0;list-style:none}
 .link-arrow i{width:26px;height:1px;background:currentColor;position:relative;transition:width .35s var(--ease)}
 .link-arrow i::after{content:"";position:absolute;right:0;top:-3px;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor;transform:rotate(45deg)}
 .link-arrow:hover i{width:44px}
-.link-arrow--light{color:var(--cream)}
 
 /* ---------- media ---------- */
 .ph{position:relative;margin:0;overflow:hidden;background:var(--g,linear-gradient(160deg,#39414a,#171b20));border-radius:3px}
@@ -364,10 +363,25 @@ ul{margin:0;padding:0;list-style:none}
    MENU / DISHES
    ============================================================= */
 .taste{background:var(--sand)}
+.taste__grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.8vw,24px)}
+.dish{
+  background:var(--cream);border:1px solid var(--line);display:flex;flex-direction:column;
+  transition:transform .5s var(--ease),box-shadow .5s var(--ease),border-color .5s;
+}
+.dish:hover{transform:translateY(-6px);box-shadow:var(--shadow-m);border-color:transparent}
+.dish__media{aspect-ratio:7/6}
+.dish:hover .dish__media img{transform:scale(1.07)}
+.dish__body{padding:clamp(16px,1.6vw,22px);display:flex;flex-direction:column;flex:1}
+.dish__cat{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold-d);margin-bottom:8px}
+.dish__body h3{font-family:var(--serif);font-weight:500;font-size:1.24rem;color:var(--graphite);margin:0 0 10px;line-height:1.2}
+.dish__price{
+  margin:auto 0 0;padding-top:12px;border-top:1px solid var(--line);
+  font-family:var(--serif);font-size:1.2rem;color:var(--graphite);
+}
 .taste__note{margin:clamp(22px,2.6vw,30px) 0 0;font-size:.88rem;color:var(--muted);max-width:70ch}
 
 /* the printed menu card, page by page */
-.menucard{margin-top:clamp(30px,3.6vw,44px)}
+.menucard{margin-top:clamp(38px,4.6vw,60px);padding-top:clamp(28px,3.4vw,42px);border-top:1px solid var(--line)}
 .menucard__head{font-family:var(--serif);font-weight:500;font-size:clamp(1.4rem,2.2vw,1.75rem);color:var(--graphite);margin:0 0 clamp(18px,2.2vw,26px)}
 .menucard__grid{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(8px,1.1vw,14px)}
 .menucard__grid .gal{aspect-ratio:3/4;background:var(--sand-2);border:1px solid var(--line)}
