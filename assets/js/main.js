@@ -243,8 +243,12 @@
     ];
     var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
 
-    var win = window.open(url, '_blank', 'noopener');
-    if (!win) { window.location.href = url; return; }
+    /* Passing 'noopener' in the features string makes window.open return null even
+       when the tab did open, so sever the opener on the handle instead. */
+    var win = window.open(url, '_blank');
+    if (win) { try { win.opener = null; } catch (err) {} }
+    else { window.location.href = url; return; }
+
     bookNote.textContent = 'Opening WhatsApp with your ' + nights + '-night request for ' +
       $('#guests').value.toLowerCase() + ' — send the message and we will confirm availability.';
   });
