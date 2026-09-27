@@ -210,6 +210,17 @@
   });
 
   var bookNote = $('#bookNote');
+  var WA_NUMBER = '918959999936';
+
+  /* "Sat, 4 Oct 2026" — spelled out by hand so the message reads the same everywhere */
+  var DAYS = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+  var MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  var pretty = function (value) {
+    var d = new Date(value + 'T00:00:00');
+    if (isNaN(d)) return value;
+    return DAYS[d.getDay()] + ', ' + d.getDate() + ' ' + MONTHS[d.getMonth()] + ' ' + d.getFullYear();
+  };
+
   $('#bookForm').addEventListener('submit', function (e) {
     e.preventDefault();
     bookNote.classList.remove('is-err');
@@ -219,8 +230,23 @@
       return;
     }
     var nights = Math.round((new Date(checkout.value) - new Date(checkin.value)) / 86400000);
-    bookNote.textContent = 'Searching ' + nights + ' night' + (nights > 1 ? 's' : '') +
-      ' for ' + $('#guests').value.toLowerCase() + ' — our reservations team will confirm availability by email.';
+    var lines = [
+      'Hi Hotel Shera, I would like to check room availability. My details are below.',
+      '',
+      'Check-in: ' + pretty(checkin.value),
+      'Check-out: ' + pretty(checkout.value),
+      'Nights: ' + nights,
+      'Guests: ' + $('#guests').value,
+      'Room type: ' + $('#rtype').value,
+      '',
+      'Please let me know the availability and tariff. Thank you.'
+    ];
+    var url = 'https://wa.me/' + WA_NUMBER + '?text=' + encodeURIComponent(lines.join('\n'));
+
+    var win = window.open(url, '_blank', 'noopener');
+    if (!win) { window.location.href = url; return; }
+    bookNote.textContent = 'Opening WhatsApp with your ' + nights + '-night request for ' +
+      $('#guests').value.toLowerCase() + ' — send the message and we will confirm availability.';
   });
 
   /* ---------- contact form ---------- */

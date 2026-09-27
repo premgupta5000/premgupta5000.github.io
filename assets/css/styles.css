@@ -267,7 +267,9 @@ ul{margin:0;padding:0;list-style:none}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold)}
 .field input::placeholder,.field textarea::placeholder{color:#B2B7BB}
 .bookbar__form .btn{align-self:end;height:46px}
-.bookbar__note{grid-column:1/-1;margin:-10px 0 0;font-size:.85rem;color:var(--gold-d);min-height:1.2em}
+.bookbar__form .btn svg{width:17px;height:17px;flex:none;fill:currentColor}
+.bookbar__hint{grid-column:1/-1;margin:-10px 0 0;font-size:.78rem;color:var(--muted)}
+.bookbar__note{grid-column:1/-1;margin:2px 0 0;font-size:.85rem;color:var(--gold-d);min-height:1.2em}
 .bookbar__note.is-err{color:#A6412F}
 @media (max-width:1000px){.bookbar__form{grid-template-columns:1fr 1fr}.bookbar__form .btn{grid-column:1/-1}}
 @media (max-width:560px){.bookbar{margin-top:-34px}.bookbar__form{grid-template-columns:1fr}}
