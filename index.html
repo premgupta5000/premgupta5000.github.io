@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="preload" as="image" href="assets/img/exterior.jpg">
-<link rel="stylesheet" href="assets/css/styles.css?v=3">
+<link rel="stylesheet" href="assets/css/styles.css?v=4">
 </head>
 <body>
 
@@ -421,6 +421,55 @@
 
     <p class="taste__note reveal">Prices from our current menu card and subject to change · GST applicable ·
       Please allow us 20 to 25 minutes to serve you better.</p>
+
+    <div class="menucard">
+      <div class="menucard__head reveal">
+        <h3>The whole card, page by page</h3>
+        <p>Twelve pages · tap any page to read it</p>
+      </div>
+      <div class="menucard__grid">
+        <button class="gal reveal" data-full="assets/img/menu-card/page-01.webp" aria-label="Open menu page: the menu card cover">
+          <img src="assets/img/menu-card/page-01-thumb.webp" alt="Menu page — the menu card cover" loading="lazy" onerror="this.remove()"><span class="gal__cap">Cover</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-02.webp" aria-label="Open menu page: breakfast, served from 8am">
+          <img src="assets/img/menu-card/page-02-thumb.webp" alt="Menu page — breakfast, served from 8am" loading="lazy" onerror="this.remove()"><span class="gal__cap">Breakfast</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-03.webp" aria-label="Open menu page: sandwiches, dessert and ice cream">
+          <img src="assets/img/menu-card/page-03-thumb.webp" alt="Menu page — sandwiches, dessert and ice cream" loading="lazy" onerror="this.remove()"><span class="gal__cap">Sandwich & dessert</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-04.webp" aria-label="Open menu page: breads, paratha, pakoda and fries">
+          <img src="assets/img/menu-card/page-04-thumb.webp" alt="Menu page — breads, paratha, pakoda and fries" loading="lazy" onerror="this.remove()"><span class="gal__cap">Breads & fries</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-05.webp" aria-label="Open menu page: beverages, tea, salad, papad and raita">
+          <img src="assets/img/menu-card/page-05-thumb.webp" alt="Menu page — beverages, tea, salad, papad and raita" loading="lazy" onerror="this.remove()"><span class="gal__cap">Drinks & salad</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-06.webp" aria-label="Open menu page: soups, veg tandoor and non-veg tandoor">
+          <img src="assets/img/menu-card/page-06-thumb.webp" alt="Menu page — soups, veg tandoor and non-veg tandoor" loading="lazy" onerror="this.remove()"><span class="gal__cap">Soups & tandoor</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-07.webp" aria-label="Open menu page: egg, fish, rice and dal">
+          <img src="assets/img/menu-card/page-07-thumb.webp" alt="Menu page — egg, fish, rice and dal" loading="lazy" onerror="this.remove()"><span class="gal__cap">Egg, rice & dal</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-08.webp" aria-label="Open menu page: chicken and mutton">
+          <img src="assets/img/menu-card/page-08-thumb.webp" alt="Menu page — chicken and mutton" loading="lazy" onerror="this.remove()"><span class="gal__cap">Chicken & mutton</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-09.webp" aria-label="Open menu page: Chinese, chowmein, chilly and snacks">
+          <img src="assets/img/menu-card/page-09-thumb.webp" alt="Menu page — Chinese, chowmein, chilly and snacks" loading="lazy" onerror="this.remove()"><span class="gal__cap">Chinese & snacks</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-10.webp" aria-label="Open menu page: biryani, bharta and hara-bhara sabji">
+          <img src="assets/img/menu-card/page-10-thumb.webp" alt="Menu page — biryani, bharta and hara-bhara sabji" loading="lazy" onerror="this.remove()"><span class="gal__cap">Biryani & sabji</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-11.webp" aria-label="Open menu page: the vegetarian page">
+          <img src="assets/img/menu-card/page-11-thumb.webp" alt="Menu page — the vegetarian page" loading="lazy" onerror="this.remove()"><span class="gal__cap">Vegetarian</span>
+        </button>
+        <button class="gal reveal" data-full="assets/img/menu-card/page-12.webp" aria-label="Open menu page: the back of the card, with the address and contact details">
+          <img src="assets/img/menu-card/page-12-thumb.webp" alt="Menu page — the back of the card, with the address and contact details" loading="lazy" onerror="this.remove()"><span class="gal__cap">Contact</span>
+        </button>
+      </div>
+      <p class="menucard__foot reveal">
+        <a class="btn btn--dark" href="assets/menu/hotel-shera-menu.pdf" target="_blank" rel="noopener">Open the menu as a PDF</a>
+        <span>4.3 MB · 12 pages</span>
+      </p>
+    </div>
   </div>
 </section>
 
@@ -516,8 +565,25 @@
     </div>
     <div class="events__media reveal" data-delay="2">
       <figure class="ph" style="--g:linear-gradient(160deg,#232a33,#101317)">
-        <img src="assets/img/restaurant-indoor-900.jpg" alt="The dining hall arranged for a celebration" loading="lazy" onerror="this.remove()">
+        <img src="assets/img/banquet-hall-900.jpg" alt="The banquet hall set for a birthday, with a balloon arch at the far end" loading="lazy" onerror="this.remove()">
       </figure>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="banquet__strip">
+      <button class="gal reveal" data-full="assets/img/banquet-tables.jpg" aria-label="Open image: round tables laid with blue covers, facing the decorated backdrop">
+        <img src="assets/img/banquet-tables-900.jpg" alt="round tables laid with blue covers, facing the decorated backdrop" loading="lazy" onerror="this.remove()"><span class="gal__cap">Table seating</span>
+      </button>
+      <button class="gal reveal" data-delay="1" data-full="assets/img/banquet-decor.jpg" aria-label="Open image: a balloon arch and birthday backdrop against the panelled wall">
+        <img src="assets/img/banquet-decor-900.jpg" alt="a balloon arch and birthday backdrop against the panelled wall" loading="lazy" onerror="this.remove()"><span class="gal__cap">Decoration</span>
+      </button>
+      <button class="gal reveal" data-delay="2" data-full="assets/img/banquet-buffet.jpg" aria-label="Open image: the hall looking towards the lit buffet counter">
+        <img src="assets/img/banquet-buffet-900.jpg" alt="the hall looking towards the lit buffet counter" loading="lazy" onerror="this.remove()"><span class="gal__cap">Buffet counter</span>
+      </button>
+      <button class="gal reveal" data-delay="3" data-full="assets/img/banquet-seating.jpg" aria-label="Open image: tables and the buffet counter set up for a function">
+        <img src="assets/img/banquet-seating-900.jpg" alt="tables and the buffet counter set up for a function" loading="lazy" onerror="this.remove()"><span class="gal__cap">Set for a party</span>
+      </button>
     </div>
   </div>
 </section>
@@ -735,6 +801,6 @@
 </div>
 
 <!-- bump ?v= when css/js change: GitHub Pages serves these with max-age=600 -->
-<script src="assets/js/main.js?v=3"></script>
+<script src="assets/js/main.js?v=4"></script>
 </body>
 </html>

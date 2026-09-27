@@ -390,6 +390,20 @@ ul{margin:0;padding:0;list-style:none}
   font-family:var(--serif);font-size:1.2rem;color:var(--graphite);
 }
 .taste__note{margin:clamp(24px,3vw,34px) 0 0;font-size:.88rem;color:var(--muted);max-width:70ch}
+
+/* the printed menu card, page by page */
+.menucard{margin-top:clamp(38px,4.6vw,60px);padding-top:clamp(28px,3.4vw,42px);border-top:1px solid var(--line)}
+.menucard__head{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:10px 24px;margin-bottom:clamp(18px,2.2vw,26px)}
+.menucard__head h3{font-family:var(--serif);font-weight:500;font-size:clamp(1.4rem,2.2vw,1.75rem);color:var(--graphite);margin:0}
+.menucard__head p{margin:0;font-size:.82rem;letter-spacing:.06em;color:var(--muted)}
+.menucard__grid{display:grid;grid-template-columns:repeat(6,1fr);gap:clamp(8px,1.1vw,14px)}
+.menucard__grid .gal{aspect-ratio:3/4;background:var(--sand-2);border:1px solid var(--line)}
+.menucard__grid .gal img{object-fit:contain;background:var(--sand-2)}
+.menucard__grid .gal:hover img{transform:none}
+.menucard__foot{display:flex;flex-wrap:wrap;align-items:center;gap:14px 18px;margin:clamp(20px,2.4vw,28px) 0 0}
+.menucard__foot span{font-size:.82rem;letter-spacing:.06em;color:var(--muted)}
+@media (max-width:900px){.menucard__grid{grid-template-columns:repeat(4,1fr)}}
+@media (max-width:520px){.menucard__grid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:1000px){.taste__grid{grid-template-columns:repeat(3,1fr)}}
 @media (max-width:720px){.taste__grid{grid-template-columns:repeat(2,1fr)}}
 @media (max-width:420px){.taste__grid{grid-template-columns:1fr}}
@@ -431,7 +445,10 @@ a.map__note:hover{background:var(--graphite);color:var(--cream)}
 .events__list span{font-size:.94rem;color:rgba(250,248,244,.66)}
 .events__media .ph{aspect-ratio:4/3;box-shadow:var(--shadow-l)}
 .events__media .ph:hover img{transform:scale(1.05)}
+.banquet__strip{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.4vw,16px);margin-top:clamp(34px,4vw,52px)}
+.banquet__strip .gal{aspect-ratio:4/3;background:#161C22;border:1px solid var(--line-l)}
 @media (max-width:900px){.events__inner{grid-template-columns:1fr}}
+@media (max-width:720px){.banquet__strip{grid-template-columns:1fr 1fr}}
 
 /* =============================================================
    GALLERY
