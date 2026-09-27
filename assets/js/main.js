@@ -268,19 +268,6 @@
     status.textContent = 'Opening WhatsApp with your message — press send there and we will reply.';
   });
 
-  /* ---------- newsletter ---------- */
-  var newsForm = $('#newsForm'), newsStatus = $('#newsStatus'), newsEmail = $('#newsEmail');
-  newsForm.addEventListener('submit', function (e) {
-    e.preventDefault();
-    if (!emailRe.test(newsEmail.value.trim())) {
-      newsStatus.textContent = 'That email doesn’t look right.';
-      newsEmail.focus();
-      return;
-    }
-    newsStatus.textContent = 'Welcome to the Shera Letter.';
-    newsForm.reset();
-  });
-
   /* ---------- scrollspy ---------- */
   var spyLinks = $$('#navLinks a[href^="#"]').filter(function (a) { return a.getAttribute('href').length > 1; });
   var sections = spyLinks.map(function (a) { return $(a.getAttribute('href')); }).filter(Boolean);
